@@ -1,0 +1,30 @@
+{
+    "_notes": [
+        "Capture 1: sweep only.",
+        "delay=2 samples: measured from the sweep's two calibration blips (10.5s, 11.5s); both agreed in all three folders.",
+        "Validation = sweep 'Validation 1' section (0-9s), identical audio for every capture so ESRs are comparable.",
+        "Sweep training = 10s-180.5s. The files are 189.5s (official is 190s); the cut-short 'Validation 2' at the end repeats",
+        "validation audio, so it's left out of training to avoid scoring on data the model trained on.",
+        "Held out from ALL training for the test-#2 song score: the last 20s of the song section",
+        "(folder-2 file 381.5-401.5s = plus file 188-208s)."
+    ],
+    "train": {
+        "x_path": "audio/sweep-only/main-nam train.wav",
+        "y_path": "audio/sweep-only/main-nam 2-Audio.wav",
+        "start_seconds": 10.0,
+        "stop_seconds": 180.5,
+        "ny": 8192,
+        "delay": 2,
+        "require_input_pre_silence": null
+    },
+    "validation": {
+        "x_path": "audio/sweep-only/main-nam train.wav",
+        "y_path": "audio/sweep-only/main-nam 2-Audio.wav",
+        "start_seconds": 0.0,
+        "stop_seconds": 9.0,
+        "ny": null,
+        "delay": 2,
+        "require_input_pre_silence": null
+    },
+    "common": {}
+}
