@@ -4,6 +4,7 @@ Neural Amp Modeler (NAM) captures of my pedals and preamps, made with a reamp bo
 
 - `complete-models/` — finished `.nam` files, one folder per capture session.
 - `tests/` — one folder per test session: run scripts, configs, and results. Audio and training output stay local (see `.gitignore`).
+- File names follow [NAMING.md](NAMING.md).
 
 ## Setup
 
