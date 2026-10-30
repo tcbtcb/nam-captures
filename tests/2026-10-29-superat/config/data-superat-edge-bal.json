@@ -1,0 +1,39 @@
+{
+    "_notes": [
+        "superat-edge-bal: sweep + playing in one file (512s).",
+        "delay=-10: the output's onset lands ~6 samples before the input blip in every file",
+        "(converter filter pre-ringing / DAW compensation); -10 matches NAM's own calibration.",
+        "Validation = sweep 'Validation 1' (0-9s). Training = 10-180.5s (sweep, minus the cut-short",
+        "duplicate validation copy at 180.5-189.5s) + 190-511s (playing)."
+    ],
+    "train": [
+        {
+            "x_path": "audio/superat-edge-bal-sweep.wav",
+            "y_path": "audio/superat-edge-bal-proc.wav",
+            "start_seconds": 10.0,
+            "stop_seconds": 180.5,
+            "ny": 8192,
+            "delay": -10,
+            "require_input_pre_silence": null
+        },
+        {
+            "x_path": "audio/superat-edge-bal-sweep.wav",
+            "y_path": "audio/superat-edge-bal-proc.wav",
+            "start_seconds": 190.0,
+            "stop_seconds": 511.0,
+            "ny": 8192,
+            "delay": -10,
+            "require_input_pre_silence": null
+        }
+    ],
+    "validation": {
+        "x_path": "audio/superat-edge-bal-sweep.wav",
+        "y_path": "audio/superat-edge-bal-proc.wav",
+        "start_seconds": 0.0,
+        "stop_seconds": 9.0,
+        "ny": null,
+        "delay": -10,
+        "require_input_pre_silence": null
+    },
+    "common": {}
+}
