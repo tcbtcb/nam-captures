@@ -1,0 +1,84 @@
+{
+    "_notes": [
+        "A2 packed/slimmable WaveNet for the Fulltone Mas Malo capture.",
+        "Same architecture as tcb/config/pantheon_model_packed.json v2: reuses the REAL",
+        "wavenet.json temporal depth (kernel_size=3, dilations up to 512, two layer arrays --",
+        "identical to A1's model config) for BOTH submodels, only varying channel width",
+        "between 'lite' and 'full_fat'. 'full_fat' matches A1's channel widths exactly",
+        "(16/8), so it should land close to A1's quality; 'lite' is half-width.",
+        "Bundles both into ONE exported model.nam (architecture SlimmableContainer)."
+    ],
+    "net": {
+        "name": "PackedWaveNet",
+        "config": {
+            "submodels": [
+                {
+                    "name": "lite",
+                    "config": {
+                        "layers_configs": [
+                            {
+                                "condition_size": 1,
+                                "input_size": 1,
+                                "channels": 8,
+                                "head": {"out_channels": 4, "kernel_size": 1, "bias": false},
+                                "kernel_size": 3,
+                                "dilations": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+                                "activation": "Tanh"
+                            },
+                            {
+                                "condition_size": 1,
+                                "input_size": 8,
+                                "channels": 4,
+                                "head": {"out_channels": 1, "kernel_size": 1, "bias": true},
+                                "kernel_size": 3,
+                                "dilations": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+                                "activation": "Tanh"
+                            }
+                        ],
+                        "head": null,
+                        "head_scale": 0.02
+                    }
+                },
+                {
+                    "name": "full_fat",
+                    "config": {
+                        "layers_configs": [
+                            {
+                                "condition_size": 1,
+                                "input_size": 1,
+                                "channels": 16,
+                                "head": {"out_channels": 8, "kernel_size": 1, "bias": false},
+                                "kernel_size": 3,
+                                "dilations": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+                                "activation": "Tanh"
+                            },
+                            {
+                                "condition_size": 1,
+                                "input_size": 16,
+                                "channels": 8,
+                                "head": {"out_channels": 1, "kernel_size": 1, "bias": true},
+                                "kernel_size": 3,
+                                "dilations": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+                                "activation": "Tanh"
+                            }
+                        ],
+                        "head": null,
+                        "head_scale": 0.02
+                    }
+                }
+            ],
+            "export": {
+                "container_max_values": "uniform"
+            }
+        }
+    },
+    "optimizer": {
+        "lr": 0.004
+    },
+    "lr_scheduler": {
+        "class": "ExponentialLR",
+        "kwargs": {
+            "gamma": 0.993
+        }
+    }
+}
