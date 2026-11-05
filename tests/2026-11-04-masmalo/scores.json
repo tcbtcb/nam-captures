@@ -6,13 +6,133 @@
   ],
   [
     "masmalo-dist-bri-boost-may",
+    "full",
+    0.0035102232359349728
+  ],
+  [
+    "masmalo-dist-bri-boost-may",
     "lite",
     0.005780261475592852
   ],
   [
-    "masmalo-dist-bri-boost-may",
+    "masmalo-edge-bal",
+    "a1",
+    0.004884821362793446
+  ],
+  [
+    "masmalo-edge-bal",
     "full",
-    0.0035102232359349728
+    0.004920175299048424
+  ],
+  [
+    "masmalo-edge-bal",
+    "lite",
+    0.004946710541844368
+  ],
+  [
+    "masmalo-edge-bal-2",
+    "a1",
+    0.005515295546501875
+  ],
+  [
+    "masmalo-edge-bal-2",
+    "full",
+    0.005500344093888998
+  ],
+  [
+    "masmalo-edge-bal-2",
+    "lite",
+    0.005783394910395145
+  ],
+  [
+    "masmalo-edge-bri",
+    "a1",
+    0.004898417741060257
+  ],
+  [
+    "masmalo-edge-bri",
+    "full",
+    0.004999177530407906
+  ],
+  [
+    "masmalo-edge-bri",
+    "lite",
+    0.0052664922550320625
+  ],
+  [
+    "masmalo-edge-bri-2",
+    "a1",
+    0.006124820094555616
+  ],
+  [
+    "masmalo-edge-bri-2",
+    "full",
+    0.006026605609804392
+  ],
+  [
+    "masmalo-edge-bri-2",
+    "lite",
+    0.00673550833016634
+  ],
+  [
+    "masmalo-fuzz-bal",
+    "a1",
+    0.00222510052844882
+  ],
+  [
+    "masmalo-fuzz-bal",
+    "full",
+    0.0020804996602237225
+  ],
+  [
+    "masmalo-fuzz-bal",
+    "lite",
+    0.00426164735108614
+  ],
+  [
+    "masmalo-fuzz-bri",
+    "a1",
+    0.00263294018805027
+  ],
+  [
+    "masmalo-fuzz-bri",
+    "full",
+    0.0026959548704326153
+  ],
+  [
+    "masmalo-fuzz-bri",
+    "lite",
+    0.005265322048217058
+  ],
+  [
+    "masmalo-od1-bal",
+    "a1",
+    0.001295768772251904
+  ],
+  [
+    "masmalo-od1-bal",
+    "full",
+    0.0013208455638960004
+  ],
+  [
+    "masmalo-od1-bal",
+    "lite",
+    0.0015808172756806016
+  ],
+  [
+    "masmalo-od1-bri",
+    "a1",
+    0.0013459398178383708
+  ],
+  [
+    "masmalo-od1-bri",
+    "full",
+    0.0013313048984855413
+  ],
+  [
+    "masmalo-od1-bri",
+    "lite",
+    0.0017998029943555593
   ],
   [
     "masmalo-od1-bri-boost-may",
@@ -21,13 +141,28 @@
   ],
   [
     "masmalo-od1-bri-boost-may",
+    "full",
+    0.0031875420827418566
+  ],
+  [
+    "masmalo-od1-bri-boost-may",
     "lite",
     0.005030050408095121
   ],
   [
-    "masmalo-od1-bri-boost-may",
+    "masmalo-od2-bal",
+    "a1",
+    0.001585414749570191
+  ],
+  [
+    "masmalo-od2-bal",
     "full",
-    0.0031875420827418566
+    0.001471844152547419
+  ],
+  [
+    "masmalo-od2-bal",
+    "lite",
+    0.002339956583455205
   ],
   [
     "masmalo-od2-bal-boost-buxom",
@@ -36,13 +171,28 @@
   ],
   [
     "masmalo-od2-bal-boost-buxom",
+    "full",
+    0.0009996846783906221
+  ],
+  [
+    "masmalo-od2-bal-boost-buxom",
     "lite",
     0.0015801971312612295
   ],
   [
-    "masmalo-od2-bal-boost-buxom",
+    "masmalo-od2-bri",
+    "a1",
+    0.0017944364808499813
+  ],
+  [
+    "masmalo-od2-bri",
     "full",
-    0.0009996846783906221
+    0.0017982878489419818
+  ],
+  [
+    "masmalo-od2-bri",
+    "lite",
+    0.0031285809818655252
   ],
   [
     "masmalo-od2-bri-boost-buxom",
@@ -51,13 +201,13 @@
   ],
   [
     "masmalo-od2-bri-boost-buxom",
-    "lite",
-    0.0022377546411007643
+    "full",
+    0.0011521729175001383
   ],
   [
     "masmalo-od2-bri-boost-buxom",
-    "full",
-    0.0011521729175001383
+    "lite",
+    0.0022377546411007643
   ],
   [
     "masmalo-od2-bri-boost-may",
@@ -66,12 +216,12 @@
   ],
   [
     "masmalo-od2-bri-boost-may",
-    "lite",
-    0.0036285638343542814
+    "full",
+    0.002187905367463827
   ],
   [
     "masmalo-od2-bri-boost-may",
-    "full",
-    0.002187905367463827
+    "lite",
+    0.0036285638343542814
   ]
 ]
