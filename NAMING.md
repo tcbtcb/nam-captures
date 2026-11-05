@@ -17,6 +17,11 @@ All lowercase, parts separated by hyphens, no spaces.
 | `tone` | `bri`, `bal`, `dark` | Bright, balanced, dark. Fixed list. |
 | `extra` | free text, optional | A switch or mode setting, e.g. `switchup`. Leave it off if not needed. |
 
+Common extras:
+
+- `-2`, `-3`, ...: another way to get the same gain and tone with different knob settings (e.g. `masmalo-edge-bal-2`). Not a recapture; see below.
+- `-boost-<name>`: a booster in front of the pedal, captured together as one chain (e.g. `masmalo-od2-bri-boost-buxom`). Boosts alone aren't captured: on this rig a boost by itself comes out as roughly unity gain plus EQ.
+
 ## Models (`.nam`)
 
 ```
@@ -48,6 +53,6 @@ Format: **48 kHz, 16-bit, mono**. Put the sweep and any extra playing in **one f
 
 ## Recaptures
 
-A new capture of the same gear and settings **replaces** the old files under the same name. No version numbers. Git keeps the old version in history.
+A new capture of the same gear and settings **replaces** the old files under the same name. No version numbers. Git keeps the old version in history. (`-2` is for a *different* setting, not a redo.)
 
 `complete-models/` is flat (no dated folders), so a new model simply overwrites the old one. Dates and test details live in `tests/<date-pedal>/`.
