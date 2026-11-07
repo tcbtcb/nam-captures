@@ -1,5 +1,50 @@
 [
   [
+    "pantheon-dist-bal-mid",
+    "a1",
+    0.0019868304952979088
+  ],
+  [
+    "pantheon-dist-bal-mid",
+    "lite",
+    0.002337770303711295
+  ],
+  [
+    "pantheon-dist-bal-mid",
+    "full",
+    0.001970392419025302
+  ],
+  [
+    "pantheon-dist-bri-mid",
+    "a1",
+    0.0224074125289917
+  ],
+  [
+    "pantheon-dist-bri-mid",
+    "lite",
+    0.03750670701265335
+  ],
+  [
+    "pantheon-dist-bri-mid",
+    "full",
+    0.019550522789359093
+  ],
+  [
+    "pantheon-dist-dark-mid",
+    "a1",
+    0.0024263099767267704
+  ],
+  [
+    "pantheon-dist-dark-mid",
+    "lite",
+    0.0028694465290755033
+  ],
+  [
+    "pantheon-dist-dark-mid",
+    "full",
+    0.002577895065769553
+  ],
+  [
     "pantheon-edge-bal-down",
     "a1",
     0.001032934756949544
@@ -60,6 +105,21 @@
     0.0010815946152433753
   ],
   [
+    "pantheon-od1-bal-mid",
+    "a1",
+    0.007192058488726616
+  ],
+  [
+    "pantheon-od1-bal-mid",
+    "lite",
+    0.009349982254207134
+  ],
+  [
+    "pantheon-od1-bal-mid",
+    "full",
+    0.0063805244863033295
+  ],
+  [
     "pantheon-od1-bri-down",
     "a1",
     0.002292696386575699
@@ -90,6 +150,36 @@
     0.0013427401427179575
   ],
   [
+    "pantheon-od1-dark-mid-1",
+    "a1",
+    0.00791368167847395
+  ],
+  [
+    "pantheon-od1-dark-mid-1",
+    "lite",
+    0.012126713991165161
+  ],
+  [
+    "pantheon-od1-dark-mid-1",
+    "full",
+    0.00870569795370102
+  ],
+  [
+    "pantheon-od1-dark-mid",
+    "a1",
+    0.005194108001887798
+  ],
+  [
+    "pantheon-od1-dark-mid",
+    "lite",
+    0.007386510726064444
+  ],
+  [
+    "pantheon-od1-dark-mid",
+    "full",
+    0.005014579277485609
+  ],
+  [
     "pantheon-od2-bal-down",
     "a1",
     0.0011758640175685287
@@ -103,6 +193,36 @@
     "pantheon-od2-bal-down",
     "full",
     0.001125343726016581
+  ],
+  [
+    "pantheon-od2-bal-down-boost",
+    "a1",
+    0.0016877211164683104
+  ],
+  [
+    "pantheon-od2-bal-down-boost",
+    "lite",
+    0.0028526310343295336
+  ],
+  [
+    "pantheon-od2-bal-down-boost",
+    "full",
+    0.0015528862131759524
+  ],
+  [
+    "pantheon-od2-bal-mid",
+    "a1",
+    0.006933891214430332
+  ],
+  [
+    "pantheon-od2-bal-mid",
+    "lite",
+    0.01008001621812582
+  ],
+  [
+    "pantheon-od2-bal-mid",
+    "full",
+    0.005972407292574644
   ],
   [
     "pantheon-od2-bri-down",
@@ -120,6 +240,21 @@
     0.0007831394905224442
   ],
   [
+    "pantheon-od2-bri-down-boost",
+    "a1",
+    0.0015578113961964846
+  ],
+  [
+    "pantheon-od2-bri-down-boost",
+    "lite",
+    0.0028351193759590387
+  ],
+  [
+    "pantheon-od2-bri-down-boost",
+    "full",
+    0.001956833526492119
+  ],
+  [
     "pantheon-od2-dark-down",
     "a1",
     0.002013350836932659
@@ -133,5 +268,35 @@
     "pantheon-od2-dark-down",
     "full",
     0.0021024420857429504
+  ],
+  [
+    "pantheon-od2-dark-mid-1",
+    "a1",
+    0.008709554560482502
+  ],
+  [
+    "pantheon-od2-dark-mid-1",
+    "lite",
+    0.01226771716028452
+  ],
+  [
+    "pantheon-od2-dark-mid-1",
+    "full",
+    0.007825220935046673
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "a1",
+    0.004105080850422382
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "lite",
+    0.0059395888820290565
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "full",
+    0.004255663137882948
   ]
 ]
