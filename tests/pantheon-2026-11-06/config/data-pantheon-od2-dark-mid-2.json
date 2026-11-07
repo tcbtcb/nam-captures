@@ -1,8 +1,8 @@
 {
     "train": [
         {
-            "x_path": "audio/pantheon-od1-dark-mid-1-sweep.wav",
-            "y_path": "audio/pantheon-od1-dark-mid-1-proc.wav",
+            "x_path": "audio/pantheon-od2-dark-mid-2-sweep.wav",
+            "y_path": "audio/pantheon-od2-dark-mid-2-proc.wav",
             "delay": -10,
             "require_input_pre_silence": null,
             "start_seconds": 10.0,
@@ -10,8 +10,8 @@
             "ny": 8192
         },
         {
-            "x_path": "audio/pantheon-od1-dark-mid-1-sweep.wav",
-            "y_path": "audio/pantheon-od1-dark-mid-1-proc.wav",
+            "x_path": "audio/pantheon-od2-dark-mid-2-sweep.wav",
+            "y_path": "audio/pantheon-od2-dark-mid-2-proc.wav",
             "delay": -10,
             "require_input_pre_silence": null,
             "start_seconds": 190.0,
@@ -20,8 +20,8 @@
         }
     ],
     "validation": {
-        "x_path": "audio/pantheon-od1-dark-mid-1-sweep.wav",
-        "y_path": "audio/pantheon-od1-dark-mid-1-proc.wav",
+        "x_path": "audio/pantheon-od2-dark-mid-2-sweep.wav",
+        "y_path": "audio/pantheon-od2-dark-mid-2-proc.wav",
         "delay": -10,
         "require_input_pre_silence": null,
         "start_seconds": 0.0,
