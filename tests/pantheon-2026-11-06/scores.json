@@ -60,6 +60,21 @@
     0.001003021141514182
   ],
   [
+    "pantheon-edge-bal-up",
+    "a1",
+    0.00572222750633955
+  ],
+  [
+    "pantheon-edge-bal-up",
+    "lite",
+    0.007800700608640909
+  ],
+  [
+    "pantheon-edge-bal-up",
+    "full",
+    0.005733414553105831
+  ],
+  [
     "pantheon-edge-bri-down",
     "a1",
     0.0007851699483580887
@@ -75,6 +90,21 @@
     0.0007090875878930092
   ],
   [
+    "pantheon-edge-bri-up",
+    "a1",
+    0.0043620518408715725
+  ],
+  [
+    "pantheon-edge-bri-up",
+    "lite",
+    0.0063996510580182076
+  ],
+  [
+    "pantheon-edge-bri-up",
+    "full",
+    0.004239832516759634
+  ],
+  [
     "pantheon-edge-dark-down",
     "a1",
     0.0018104284536093473
@@ -88,6 +118,21 @@
     "pantheon-edge-dark-down",
     "full",
     0.001947004464454949
+  ],
+  [
+    "pantheon-edge-dark-up",
+    "a1",
+    0.009438197128474712
+  ],
+  [
+    "pantheon-edge-dark-up",
+    "lite",
+    0.010944756679236889
+  ],
+  [
+    "pantheon-edge-dark-up",
+    "full",
+    0.009392687119543552
   ],
   [
     "pantheon-od1-bal-down",
@@ -120,6 +165,21 @@
     0.0063805244863033295
   ],
   [
+    "pantheon-od1-bal-up",
+    "a1",
+    0.00115391134750098
+  ],
+  [
+    "pantheon-od1-bal-up",
+    "lite",
+    0.0013085698010399938
+  ],
+  [
+    "pantheon-od1-bal-up",
+    "full",
+    0.0011772526195272803
+  ],
+  [
     "pantheon-od1-bri-down",
     "a1",
     0.002292696386575699
@@ -133,6 +193,21 @@
     "pantheon-od1-bri-down",
     "full",
     0.002209690399467945
+  ],
+  [
+    "pantheon-od1-bri-up",
+    "a1",
+    0.0005400935187935829
+  ],
+  [
+    "pantheon-od1-bri-up",
+    "lite",
+    0.0007964013493619859
+  ],
+  [
+    "pantheon-od1-bri-up",
+    "full",
+    0.0006018005660735071
   ],
   [
     "pantheon-od1-dark-down",
@@ -150,6 +225,21 @@
     0.0013427401427179575
   ],
   [
+    "pantheon-od1-dark-mid",
+    "a1",
+    0.005194108001887798
+  ],
+  [
+    "pantheon-od1-dark-mid",
+    "lite",
+    0.007386510726064444
+  ],
+  [
+    "pantheon-od1-dark-mid",
+    "full",
+    0.005014579277485609
+  ],
+  [
     "pantheon-od1-dark-mid-1",
     "a1",
     0.00791368167847395
@@ -165,19 +255,19 @@
     0.00870569795370102
   ],
   [
-    "pantheon-od1-dark-mid",
+    "pantheon-od1-dark-up",
     "a1",
-    0.005194108001887798
+    0.001677626627497375
   ],
   [
-    "pantheon-od1-dark-mid",
+    "pantheon-od1-dark-up",
     "lite",
-    0.007386510726064444
+    0.0019118625205010176
   ],
   [
-    "pantheon-od1-dark-mid",
+    "pantheon-od1-dark-up",
     "full",
-    0.005014579277485609
+    0.001942398608662188
   ],
   [
     "pantheon-od2-bal-down",
@@ -225,6 +315,21 @@
     0.005972407292574644
   ],
   [
+    "pantheon-od2-bal-up",
+    "a1",
+    0.001070664031431079
+  ],
+  [
+    "pantheon-od2-bal-up",
+    "lite",
+    0.0014809417771175504
+  ],
+  [
+    "pantheon-od2-bal-up",
+    "full",
+    0.0012218906776979566
+  ],
+  [
     "pantheon-od2-bri-down",
     "a1",
     0.0007864293875172734
@@ -255,6 +360,21 @@
     0.001956833526492119
   ],
   [
+    "pantheon-od2-bri-up",
+    "a1",
+    0.000574008678086102
+  ],
+  [
+    "pantheon-od2-bri-up",
+    "lite",
+    0.0009465758339501917
+  ],
+  [
+    "pantheon-od2-bri-up",
+    "full",
+    0.0005141644505783916
+  ],
+  [
     "pantheon-od2-dark-down",
     "a1",
     0.002013350836932659
@@ -268,6 +388,21 @@
     "pantheon-od2-dark-down",
     "full",
     0.0021024420857429504
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "a1",
+    0.004105080850422382
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "lite",
+    0.0059395888820290565
+  ],
+  [
+    "pantheon-od2-dark-mid",
+    "full",
+    0.004255663137882948
   ],
   [
     "pantheon-od2-dark-mid-1",
@@ -285,18 +420,18 @@
     0.007825220935046673
   ],
   [
-    "pantheon-od2-dark-mid",
+    "pantheon-od2-dark-up",
     "a1",
-    0.004105080850422382
+    0.0025334772653877735
   ],
   [
-    "pantheon-od2-dark-mid",
+    "pantheon-od2-dark-up",
     "lite",
-    0.0059395888820290565
+    0.0030722729861736298
   ],
   [
-    "pantheon-od2-dark-mid",
+    "pantheon-od2-dark-up",
     "full",
-    0.004255663137882948
+    0.0024182016495615244
   ]
 ]
