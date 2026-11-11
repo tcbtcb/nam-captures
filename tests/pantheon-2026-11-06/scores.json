@@ -1,5 +1,20 @@
 [
   [
+    "pantheon-dist-bal-boost-cascade",
+    "a1",
+    0.002936000470072031
+  ],
+  [
+    "pantheon-dist-bal-boost-cascade",
+    "lite",
+    0.004446578677743673
+  ],
+  [
+    "pantheon-dist-bal-boost-cascade",
+    "full",
+    0.0025358570273965597
+  ],
+  [
     "pantheon-dist-bal-mid",
     "a1",
     0.0019868304952979088
@@ -13,6 +28,21 @@
     "pantheon-dist-bal-mid",
     "full",
     0.001970392419025302
+  ],
+  [
+    "pantheon-dist-bri-boost-cascade",
+    "a1",
+    0.0031456714496016502
+  ],
+  [
+    "pantheon-dist-bri-boost-cascade",
+    "lite",
+    0.004722566809505224
+  ],
+  [
+    "pantheon-dist-bri-boost-cascade",
+    "full",
+    0.0034298559185117483
   ],
   [
     "pantheon-dist-bri-mid",
@@ -270,6 +300,21 @@
     0.001942398608662188
   ],
   [
+    "pantheon-od2-bal-boost-cascade",
+    "a1",
+    0.0017697328003123403
+  ],
+  [
+    "pantheon-od2-bal-boost-cascade",
+    "lite",
+    0.00271453894674778
+  ],
+  [
+    "pantheon-od2-bal-boost-cascade",
+    "full",
+    0.0019111280562356114
+  ],
+  [
     "pantheon-od2-bal-down",
     "a1",
     0.0011758640175685287
@@ -328,6 +373,21 @@
     "pantheon-od2-bal-up",
     "full",
     0.0012218906776979566
+  ],
+  [
+    "pantheon-od2-bri-boost-cascade",
+    "a1",
+    0.0030915187671780586
+  ],
+  [
+    "pantheon-od2-bri-boost-cascade",
+    "lite",
+    0.004572044592350721
+  ],
+  [
+    "pantheon-od2-bri-boost-cascade",
+    "full",
+    0.002884581685066223
   ],
   [
     "pantheon-od2-bri-down",
