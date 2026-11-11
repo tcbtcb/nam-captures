@@ -22,6 +22,22 @@ Common extras:
 - `-2`, `-3`, ...: another way to get the same gain and tone with different knob settings (e.g. `masmalo-edge-bal-2`). Not a recapture; see below.
 - `-boost-<name>`: a booster in front of the pedal, captured together as one chain (e.g. `masmalo-od2-bri-boost-buxom`). Boosts alone aren't captured: on this rig a boost by itself comes out as roughly unity gain plus EQ.
 
+## Preamps
+
+```
+preamp-gain-<switches...>-tone
+```
+
+Same `gain` and `tone` lists, with the tone **last**. In between, one word per switch setting, in the same order every time
+for that preamp. The preamp name is one word (`asc1`, not `asc-1`).
+
+| Preamp | Switches | Example |
+|---|---|---|
+| `ird` (Friedman IR-D) | structure, then full/bright | `ird-clean-center-full-bal` |
+| `asc1` (Walrus ASC-1) | TBD | |
+
+Preamp names are listed in `PREAMPS` in `tools/prep.py`; add new ones there.
+
 ## Models (`.nam`)
 
 ```

@@ -17,6 +17,7 @@ import numpy as np, soundfile as sf
 SR = 48000
 GAINS = ["clean", "edge", "od1", "od2", "dist", "fuzz"]
 TONES = ["bri", "bal", "dark"]
+PREAMPS = ["ird", "asc1"]  # named preamp-gain-<switches...>-tone (see NAMING.md)
 TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template")
 
 
@@ -37,6 +38,14 @@ def known_pedals():
 
 def check_name(n):
     p = n.split("-")
+    if p[0] in PREAMPS:
+        if len(p) < 4:
+            return "should be preamp-gain-<switches...>-tone"
+        if p[1] not in GAINS:
+            return f"gain '{p[1]}' isn't one of {GAINS}"
+        if p[-1] not in TONES:
+            return f"tone (last part) '{p[-1]}' isn't one of {TONES}"
+        return None
     if len(p) < 3:
         return "should be pedal-gain-tone[-extra]"
     if p[1] not in GAINS:
