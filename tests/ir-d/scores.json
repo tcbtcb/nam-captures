@@ -1,6 +1,11 @@
 [
   [
     "ird-clean-center-full-bal",
+    "a1",
+    0.0016454589786008
+  ],
+  [
+    "ird-clean-center-full-bal",
     "lite",
     0.002798647154122591
   ],
@@ -11,6 +16,11 @@
   ],
   [
     "ird-clean-center-full-bri",
+    "a1",
+    0.0013645458966493607
+  ],
+  [
+    "ird-clean-center-full-bri",
     "lite",
     0.00250727916136384
   ],
@@ -18,6 +28,11 @@
     "ird-clean-center-full-bri",
     "full",
     0.0012364432914182544
+  ],
+  [
+    "ird-clean-center-full-dark",
+    "a1",
+    0.0018142064800485969
   ],
   [
     "ird-clean-center-full-dark",
