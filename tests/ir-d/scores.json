@@ -18,5 +18,15 @@
     "ird-clean-center-full-bri",
     "full",
     0.0012364432914182544
+  ],
+  [
+    "ird-clean-center-full-dark",
+    "lite",
+    0.002915549324825406
+  ],
+  [
+    "ird-clean-center-full-dark",
+    "full",
+    0.0018213080475106835
   ]
 ]
