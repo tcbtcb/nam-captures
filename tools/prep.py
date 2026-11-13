@@ -7,11 +7,12 @@ For each exported file it:
     and checks it follows NAMING.md: pedal-gain-tone[-extra]
   - checks the audio: mono, 48 kHz, 16-bit, not silent, no clipping, level near the sweep's
   - trims the sweep and the export to the same length (NAM needs equal lengths)
+  - measures the latency (NAM's own check) and sets the delay from the batch's median
   - saves <name>-sweep.wav and <name>-proc.wav into the test folder's audio/
   - writes config/data-<name>.json
 Then it prints the command to train them.
 """
-import json, os, re, shutil, sys
+import contextlib, io, json, os, re, shutil, sys, warnings
 import numpy as np, soundfile as sf
 
 SR = 48000
@@ -53,6 +54,15 @@ def check_name(n):
     if p[2] not in TONES:
         return f"tone '{p[2]}' isn't one of {TONES}"
     return None
+
+
+def latency(y):
+    """NAM's latency check on the export (the clicks at the start of the sweep)."""
+    from nam.train import core
+    warnings.filterwarnings("ignore")
+    with contextlib.redirect_stdout(io.StringIO()):
+        return core._calibrate_latency_v3(y.astype(np.float32) / 32768, False, False,
+                                          _override_suppress_plots=True).recommended
 
 
 def read(path):
@@ -128,11 +138,30 @@ def main():
 
         sf.write(os.path.join(test, "audio", f"{n}-sweep.wav"), x, SR, subtype="PCM_16")
         sf.write(os.path.join(test, "audio", f"{n}-proc.wav"), y, SR, subtype="PCM_16")
+        lat = latency(y)
+        print(f"  latency (NAM check): {lat}")
+        ok.append((n, L, lat))
 
+    if not ok:
+        print(f"\n0 of {len(files)} ready.")
+        return
+
+    # Delay: the batch's median latency minus a 4-sample margin (pedals on the usual
+    # routing measure -6, giving the -10 used since the start). The median ignores
+    # the odd bad reading NAM gives on noisy files.
+    med = int(np.median([lat for _, _, lat in ok]))
+    delay = med - 4
+    print(f"\nDelay for this batch: {delay} (median latency {med} - 4)")
+    for n, _, lat in ok:
+        if abs(lat - med) > 3:
+            print(f"  WARNING: {n} measured {lat}, far from the batch's {med}. A bad reading, or a different"
+                  " routing? If the routing changed, prep that file on its own.")
+
+    for n, L, _ in ok:
         # Validation: sweep's first 9s. Training: the rest, minus the cut-short copy
-        # of the validation clip at 180.5-190s. Delay -10 fits this rig (see READMEs).
+        # of the validation clip at 180.5-190s.
         pair = {"x_path": f"audio/{n}-sweep.wav", "y_path": f"audio/{n}-proc.wav",
-                "delay": -10, "require_input_pre_silence": None}
+                "delay": delay, "require_input_pre_silence": None}
         stop = min(511.0, L / SR - 0.5)
         cfg = {"train": [dict(pair, start_seconds=10.0, stop_seconds=180.5, ny=8192),
                          dict(pair, start_seconds=190.0, stop_seconds=stop, ny=8192)],
@@ -140,11 +169,10 @@ def main():
                "common": {}}
         os.makedirs(os.path.join(test, "config"), exist_ok=True)
         json.dump(cfg, open(os.path.join(test, "config", f"data-{n}.json"), "w"), indent=4)
-        ok.append(n)
 
+    names = [n for n, _, _ in ok]
     print(f"\n{len(ok)} of {len(files)} ready.")
-    if ok:
-        print(f"\nTo train:\n  cd {test}\n  caffeinate -i ./run_all.sh {' '.join(ok)}")
+    print(f"\nTo train:\n  cd {test}\n  caffeinate -i ./run_all.sh {' '.join(names)}")
 
 
 if __name__ == "__main__":

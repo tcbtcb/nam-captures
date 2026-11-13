@@ -6,13 +6,14 @@ import numpy as np, soundfile as sf, torch
 from nam.models import init_from_nam
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-SR, DELAY, VAL = 48000, -10, (0.0, 9.0)
+SR, VAL = 48000, (0.0, 9.0)
 
 
-def esr(model, x, y):
-    # NAM pairs output sample t with input sample t - DELAY
+def esr(model, x, y, delay):
+    # NAM pairs output sample t with input sample t - delay
     a, b = int(VAL[0] * SR), int(VAL[1] * SR)
-    shift = -DELAY
+    shift = -delay
+    a = max(a, -shift)  # positive delay: skip the first few samples
     pre = min(a + shift, model.receptive_field)
     with torch.no_grad():
         pred = model(torch.from_numpy(x[a + shift - pre:b + shift]), pad_start=True).numpy()[pre:]
@@ -34,9 +35,10 @@ for path in sorted(glob.glob(f"{ROOT}/runs/*/*/model.nam")):
     name = run.rsplit("-", 1)[0]
     x, _ = sf.read(f"{ROOT}/audio/{name}-sweep.wav", dtype="float32")
     y, _ = sf.read(f"{ROOT}/audio/{name}-proc.wav", dtype="float32")
+    delay = json.load(open(f"{ROOT}/config/data-{name}.json"))["validation"]["delay"]
     for size, m in models_in(path):
         m.eval()
-        rows.append((name, size, esr(m, x, y)))
+        rows.append((name, size, esr(m, x, y, delay)))
 
 print(f"{'capture':20s} {'model':5s} {'ESR':>8s}")
 for r in rows:
